@@ -1,4 +1,5 @@
-name: workflow-dispatch
+
+name: dispatch-workflow
 on:
 	workflow_dispatch:
     inputs:
