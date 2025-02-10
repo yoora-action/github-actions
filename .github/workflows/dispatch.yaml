@@ -1,4 +1,4 @@
-name: workflow_dispatch
+name: workflow-dispatch
 
 on:
 	workflow_dispatch:
@@ -16,7 +16,7 @@ on:
         options:
         - dev
         - prod
-        
+
 jobs:
   workflow-dispatch-job:
     runs-on: ubuntu-latest
