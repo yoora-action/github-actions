@@ -1,11 +1,10 @@
-name: pull-request-workflow
-on: 
-  pull_request:
-    # pull request가 생성된 시점에 트리거
+name: issue-workflow
+on:
+  issues:
     types: [opened]
 
 jobs:
-  pull-request-job:
+  issue-job:
     runs-on: ubuntu-latest
     steps:
     - name: step1
