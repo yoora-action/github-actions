@@ -1,9 +1,9 @@
 name: multiple-event-workflow
 on:
   push:
-  issue:
+  issues:
     types: [opened]
-    workflow_dispatch:
+  workflow_dispatch:
 
 
 jobs:
