@@ -3,14 +3,14 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: \'set name\'
+        description: 'set name'
         required: true
-        default: \'github-actions\'
+        default: 'github-actions'
         type: string
       environment:
-        description: \'set env\'
+        description: 'set env'
         required: true
-        default: \'dev\'
+        default: 'dev'
         type: choice
         options:
           - dev
