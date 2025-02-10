@@ -1,5 +1,8 @@
 name: pull-request-workflow
-on: pull_request
+on: 
+  pull_request:
+    # pull request가 생성된 시점에 트리거
+    types: [opened]
 
 jobs:
   pull-request-job:
