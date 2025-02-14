@@ -16,4 +16,4 @@ jobs:
         done
       timeout-minutes: 1
     - name: echo
-      run: echo hello
+      run: echo hello lala
