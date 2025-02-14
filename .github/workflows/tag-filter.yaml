@@ -1,0 +1,12 @@
+name: tag-filter
+on:
+  push:
+    tags:
+    - 'v[0-9]+.[0-9]+.[0-9]+' # v1.0.0 or v2.2.2 같은 유형 태그에서 트리거됨
+
+jobs:
+  tag-filter:
+    runs-on: ubuntu-latest
+    steps:
+    - name: echo
+      run: echo hello
