@@ -10,5 +10,5 @@ jobs:
     - name: step2
     # 멀티라인 커맨드 작성
       run: |
-        echo hello world yoora
+        echo hello world 
         echo github action
