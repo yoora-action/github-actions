@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          수정수정수정수정
+          ffkkfkfkfkfkfk
         </a>
       </header>
     </div>
