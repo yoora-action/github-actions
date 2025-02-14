@@ -1,0 +1,31 @@
+name: cache
+on:
+  push:
+    paths:
+    - 'my-app/**'
+
+jobs:
+  cache:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4  # 레포에 checkout
+    - name: setup-node
+      uses: actions/setup-node@v3  # node v18 을 설치하는 옵션
+      with:
+        node-version: 18
+    - name: Cache Node.js modules
+      used: action/cache@v3   # cache action 사용
+      with:
+        path: ~/.npm  # 캐싱할 경로
+        key: ${{runner.os}}-node-${{hashFiles('**/package-lock.json')}}
+        restore-keys: |
+          ${{runner.os}}-node-
+    - name: Install dependencies
+      run: |
+        cd my-app
+        npm ci
+    - name: npm build
+      run: |
+        cd my-app
+        npm run build
